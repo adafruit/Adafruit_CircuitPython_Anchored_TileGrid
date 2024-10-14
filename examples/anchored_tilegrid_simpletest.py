@@ -22,7 +22,7 @@ circle_palette = Palette(1)
 circle_palette[0] = 0xFF00FF
 
 # circle object, we'll place our speech blurb near this
-circle = Circle(pixel_shader=circle_palette, radius=20, x=40, y=160)
+circle = Circle(pixel_shader=circle_palette, radius=20, x=40, y=70)
 
 # initialize a Group and add the circle to it
 main_group = Group()
@@ -41,7 +41,7 @@ speech_blurb = AnchoredTileGrid(bitmap=speech_blurb_bmp, pixel_shader=speech_blu
 speech_blurb.anchor_point = (0.18, 1.0)
 
 # position it near the circle
-speech_blurb.anchored_position = (60, 150)
+speech_blurb.anchored_position = (circle.x + 16, circle.y - 16)
 
 # add it to the group
 main_group.append(speech_blurb)
