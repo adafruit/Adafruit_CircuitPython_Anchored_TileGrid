@@ -89,6 +89,12 @@ Or the following command to update an existing version:
 Usage Example
 =============
 
+.. code-block:: python
+
+    speech_blurb_bmp = OnDiskBitmap("example_image.bmp")
+    speech_blurb = AnchoredTileGrid(bitmap=speech_blurb_bmp, pixel_shader=speech_blurb_bmp.pixel_shader)
+    speech_blurb.anchor_point = (0.18, 1.0)
+    speech_blurb.anchored_position = (60, 150)
 
 Documentation
 =============
